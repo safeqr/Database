@@ -6,19 +6,17 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 
 -- user table, need "" because user is a reserved word is postgres
- CREATE TABLE safeqr."user" (
-    id character varying(255) PRIMARY KEY,
-    cognitoid character varying,
-    firstname character varying(255),
-    lastname character varying(255),
-    email character varying(255),
-    source character varying(255),
-    password character varying(255),
-    salt character varying(255),
-    cognito_id character varying(255),
-    first_name character varying(255),
-    last_name character varying(255)
- );
+CREATE TABLE safeqr."user" (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    source VARCHAR(255),
+    date_created TIMESTAMPTZ DEFAULT now(),
+    date_updated TIMESTAMPTZ DEFAULT now(),
+    roles TEXT[],
+    status VARCHAR(255) DEFAULT 'ACTIVE'
+);
+
 
 -- Create QR_Code_Types table
 CREATE TABLE safeqr.qr_code_types (
