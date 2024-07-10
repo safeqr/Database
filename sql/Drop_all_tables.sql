@@ -1,0 +1,16 @@
+-- Drop the tables with CASCADE to handle dependencies
+
+DROP TABLE IF EXISTS safeqr.vcard CASCADE;
+DROP TABLE IF EXISTS safeqr.bitcoin CASCADE;
+DROP TABLE IF EXISTS safeqr.wifi CASCADE;
+DROP TABLE IF EXISTS safeqr.geolocation CASCADE;
+DROP TABLE IF EXISTS safeqr.email CASCADE;
+DROP TABLE IF EXISTS safeqr.sms CASCADE;
+DROP TABLE IF EXISTS safeqr.phone CASCADE;
+DROP TABLE IF EXISTS safeqr.text CASCADE;
+DROP TABLE IF EXISTS safeqr.url CASCADE;
+DROP TABLE IF EXISTS safeqr.scan_bookmark CASCADE;
+DROP TABLE IF EXISTS safeqr.scan_history CASCADE;
+DROP TABLE IF EXISTS safeqr.qr_code CASCADE;
+DROP TABLE IF EXISTS safeqr.qr_code_types CASCADE;
+DROP TABLE IF EXISTS safeqr."user" CASCADE;
