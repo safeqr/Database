@@ -37,7 +37,8 @@ INSERT INTO safeqr.qr_code_types (type, description, prefix, table_name) VALUES
 ('GEOLOCATION', 'Geographic Location', 'geo:', 'geolocation'),
 ('WIFI', 'Wireless Network Configuration', 'WIFI:', 'wifi'),
 ('BITCOIN', 'Cryptocurrency Address', 'bitcoin:', 'bitcoin'),
-('VCARD', 'Virtual Contact File', 'BEGIN:VCARD', 'vcard');
+('VCARD', 'Virtual Contact File', 'BEGIN:VCARD', 'vcard'),
+('TEXT', 'Text', '', 'text');
 
 
 -- Insert into QR_Code table

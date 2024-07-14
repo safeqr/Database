@@ -4,6 +4,10 @@ CREATE SCHEMA IF NOT EXISTS safeqr;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+-- Create Enum for scan_history status
+CREATE TYPE scan_status AS ENUM ('active', 'inactive');
+
+
 
 -- user table, need "" because user is a reserved word is postgres
 CREATE TABLE safeqr."user" (
@@ -41,7 +45,8 @@ CREATE TABLE safeqr.qr_code (
 CREATE TABLE safeqr.scan_history (
     id SERIAL PRIMARY KEY,
     qr_code_id UUID REFERENCES safeqr.qr_code(id),
-    user_id VARCHAR(255) REFERENCES safeqr."user"(id)
+    user_id VARCHAR(255) REFERENCES safeqr."user"(id),
+    status scan_status DEFAULT 'active'
 );
 
 -- Create Scan_Bookmark table
