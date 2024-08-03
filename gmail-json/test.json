@@ -1,0 +1,134 @@
+{
+    "emails": [
+        {
+            "snippet": "",
+            "threadId": "190e95e29f2334d8",
+            "labelIds": [
+                "IMPORTANT",
+                "SENT",
+                "INBOX"
+            ],
+            "payload": {
+                "parts": [
+                    {
+                        "parts": [
+                            {
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/plain; charset=\"UTF-8\""
+                                    }
+                                ],
+                                "filename": "",
+                                "mimeType": "text/plain",
+                                "body": {
+                                    "data": "DQo=",
+                                    "size": 2
+                                },
+                                "partId": "0.0"
+                            },
+                            {
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html; charset=\"UTF-8\""
+                                    }
+                                ],
+                                "filename": "",
+                                "mimeType": "text/html",
+                                "body": {
+                                    "data": "PGRpdj48aW1nIHNyYz0iY2lkOjE5MGU5NWYzZDAwOTZmZjQ5YjQxIiBzdHlsZT0ibWF4LXdpZHRoOiAxMDAlOyI-PC9kaXY-DQo=",
+                                    "size": 74
+                                },
+                                "partId": "0.1"
+                            }
+                        ],
+                        "headers": [
+                            {
+                                "name": "Content-Type",
+                                "value": "multipart/alternative; boundary=\"0000000000006b7c83061e0f9c47\""
+                            }
+                        ],
+                        "filename": "",
+                        "mimeType": "multipart/alternative",
+                        "body": {
+                            "size": 0
+                        },
+                        "partId": "0"
+                    },
+                    {
+                        "headers": [
+                            {
+                                "name": "Content-Type",
+                                "value": "image/png; name=\"6E0889F8-6DAD-417C-A1AF-756DBC1138AC.png\""
+                            },
+                            {
+                                "name": "Content-Disposition",
+                                "value": "attachment; filename=\"6E0889F8-6DAD-417C-A1AF-756DBC1138AC.png\""
+                            },
+                            {
+                                "name": "Content-Transfer-Encoding",
+                                "value": "base64"
+                            },
+                            {
+                                "name": "X-Attachment-Id",
+                                "value": "190e95f3d0096ff49b41"
+                            },
+                            {
+                                "name": "Content-ID",
+                                "value": "<190e95f3d0096ff49b41>"
+                            }
+                        ],
+                        "filename": "6E0889F8-6DAD-417C-A1AF-756DBC1138AC.png",
+                        "mimeType": "image/png",
+                        "body": {
+                            "size": 579220,
+                            "attachmentId": "ANGjdJ-HCTgEgqdJXIljB63MrOfI7vChyoOoesaB3u3MGzB038Gv47OSpXQ8DB8l4IpQ8uowl7BUys7Q2dQDv46AylseBwXr4tKmqCJ9DSOFcQnYqOUqN-4t_tlQf7jpI5IoYgpRkqCk6Hr_lihjzfyxSqRGVIgVHJgUvCEJT6jgBEBDDEHqFI8y2JcXyYEuzE51_BCUWTQOUcu6PvVzJSCSvKoLc3zzwYfsMHXr4UX1lSIHAKxDTvfYj-m0KzfPucrcl0ywLD5CvgIJUGsE1X6tbgRRfoHfwL9wdSQHsedre0t_sXNlY592jcy9pUs"
+                        },
+                        "partId": "1"
+                    }
+                ],
+                "headers": [
+                    {
+                        "name": "MIME-Version",
+                        "value": "1.0"
+                    },
+                    {
+                        "name": "Date",
+                        "value": "Thu, 25 Jul 2024 18:10:57 +0800"
+                    },
+                    {
+                        "name": "Message-ID",
+                        "value": "<CAOhDyE09kVfVpYTOwm6cwir9tLaYvs9JM-4ZJsNQpk57uOOd_w@mail.gmail.com>"
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Test Test"
+                    },
+                    {
+                        "name": "From",
+                        "value": "SafeQR <safeqr.fyp.24.s2.43p@gmail.com>"
+                    },
+                    {
+                        "name": "To",
+                        "value": "SafeQR <safeqr.fyp.24.s2.43p@gmail.com>"
+                    },
+                    {
+                        "name": "Content-Type",
+                        "value": "multipart/related; boundary=\"0000000000006b7c84061e0f9c48\""
+                    }
+                ],
+                "filename": "",
+                "mimeType": "multipart/related",
+                "body": {
+                    "size": 0
+                },
+                "partId": ""
+            },
+            "historyId": 27133,
+            "id": "190e95f5626b2a39",
+            "sizeEstimate": 793666,
+            "internalDate": 1721902257000
+        }
+    ]
+}
