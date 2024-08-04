@@ -207,3 +207,59 @@ CREATE TABLE safeqr.vcard (
     email VARCHAR(250),
     url VARCHAR(2048)
 );
+
+-- safeqr.gmail_emails definition
+
+-- Drop table
+
+-- DROP TABLE safeqr.gmail_emails;
+
+CREATE TABLE safeqr.gmail_emails (
+	user_id varchar NOT NULL,
+	subject text NULL,
+	email_date timestamptz NULL,
+	date_created timestamptz DEFAULT CURRENT_TIMESTAMP NULL,
+	message_id varchar NOT NULL,
+	history_id int8 NULL,
+	id uuid DEFAULT safeqr.uuid_generate_v4() NOT NULL,
+	CONSTRAINT gmail_pk PRIMARY KEY (id),
+	CONSTRAINT gmail_unique UNIQUE (user_id, message_id),
+	CONSTRAINT gmail_user_fk FOREIGN KEY (user_id) REFERENCES safeqr."user"(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- safeqr.gmail_urls definition
+
+-- Drop table
+
+-- DROP TABLE safeqr.gmail_urls;
+
+CREATE TABLE safeqr.gmail_urls (
+	gmail_id uuid NOT NULL,
+	image_url text NOT NULL,
+	decoded_content varchar NULL,
+	qr_code_id uuid NOT NULL,
+	id uuid DEFAULT safeqr.uuid_generate_v4() NOT NULL,
+	CONSTRAINT gmail_urls_pk PRIMARY KEY (id),
+	CONSTRAINT gmail_urls_unique UNIQUE (gmail_id, image_url, decoded_content),
+	CONSTRAINT gmail_urls_gmail_emails_fk FOREIGN KEY (gmail_id) REFERENCES safeqr.gmail_emails(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT gmail_urls_qr_code_fk FOREIGN KEY (qr_code_id) REFERENCES safeqr.qr_code(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- safeqr.gmail_cid definition
+
+-- Drop table
+
+-- DROP TABLE safeqr.gmail_cid;
+
+CREATE TABLE safeqr.gmail_cid (
+	gmail_id uuid NOT NULL,
+	cid varchar NOT NULL,
+	attachment_id text NOT NULL,
+	decoded_content text NOT NULL,
+	qr_code_id uuid NOT NULL,
+	id uuid DEFAULT safeqr.uuid_generate_v4() NOT NULL,
+	CONSTRAINT gmail_cid_pk PRIMARY KEY (id),
+	CONSTRAINT gmail_cid_unique UNIQUE (gmail_id, cid, decoded_content),
+	CONSTRAINT gmail_cid_gmail_emails_fk FOREIGN KEY (gmail_id) REFERENCES safeqr.gmail_emails(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT gmail_cid_qr_code_fk FOREIGN KEY (qr_code_id) REFERENCES safeqr.qr_code(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
