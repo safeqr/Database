@@ -217,7 +217,7 @@ CREATE TABLE safeqr.vcard (
 CREATE TABLE safeqr.gmail_emails (
 	user_id varchar NOT NULL,
 	subject text NULL,
-	email_date timestamptz NULL,
+	date_received timestamptz NULL,
 	date_created timestamptz DEFAULT CURRENT_TIMESTAMP NULL,
 	message_id varchar NOT NULL,
 	history_id int8 NULL,
