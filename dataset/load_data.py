@@ -7,7 +7,7 @@ import concurrent.futures
 endpoint_url = "http://localhost:8080/v1/qrcodetypes/scan" 
 
 # Path to the CSV file
-csv_file_path = "malicious_phish.csv" 
+csv_file_path = "malicious_phish.csv"
 
 # Directory to store the split CSV files
 split_files_dir = "split_csv_files"
