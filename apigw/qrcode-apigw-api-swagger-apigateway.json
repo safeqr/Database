@@ -1,0 +1,610 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2024-07-13T15:48:52Z",
+    "title" : "qrcode-apigw"
+  },
+  "host" : "bk5wiynzsi.execute-api.ap-southeast-1.amazonaws.com",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/v1/gmail/getEmails" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/gmail/getEmails",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/qrcodetypes/checkRedirects" : {
+      "post" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "POST",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/qrcodetypes/checkRedirects",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/qrcodetypes/detect" : {
+      "post" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "POST",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/qrcodetypes/detect",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/qrcodetypes/getQRDetails" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/qrcodetypes/getQRDetails",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/qrcodetypes/scan" : {
+      "post" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "POST",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/qrcodetypes/scan",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/qrcodetypes/verifyURL" : {
+      "post" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "POST",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/qrcodetypes/verifyURL",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/qrcodetypes/virusTotalCheck" : {
+      "post" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "POST",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/qrcodetypes/virusTotalCheck",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/deleteAllBookmark" : {
+      "put" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "PUT",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/deleteAllBookmark",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/deleteAllScannedHistories" : {
+      "put" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "PUT",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/deleteAllScannedHistories",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/deleteBookmark" : {
+      "put" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "PUT",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/deleteBookmark",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+            
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/deleteScannedHistories" : {
+      "put" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "PUT",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/deleteScannedHistories",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/getBookmarks" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/getBookmarks",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/getScannedHistories" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/getScannedHistories",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/getUser" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/getUser",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/user/setBookmark" : {
+      "post" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "POST",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/user/setBookmark",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/version" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/version",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "Cognito" : {
+      "type" : "apiKey",
+      "name" : "Authorization",
+      "in" : "header",
+      "x-amazon-apigateway-authtype" : "cognito_user_pools",
+      "x-amazon-apigateway-authorizer" : {
+        "providerARNs" : [ "arn:aws:cognito-idp:ap-southeast-1:058264269465:userpool/ap-southeast-1_zkxA0NZYN" ],
+        "type" : "cognito_user_pools"
+      }
+    }
+  },
+  "definitions" : {
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    }
+  },
+  "x-amazon-apigateway-gateway-responses" : {
+    "DEFAULT_4XX" : {
+      "responseParameters" : {
+        "gatewayresponse.header.Access-Control-Allow-Methods" : "'OPTIONS'",
+        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'",
+        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+      }
+    },
+    "DEFAULT_5XX" : {
+      "responseParameters" : {
+        "gatewayresponse.header.Access-Control-Allow-Methods" : "'OPTIONS'",
+        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'",
+        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+      }
+    }
+  },
+  "x-amazon-apigateway-policy" : {
+    "Version" : "2012-10-17",
+    "Statement" : [ {
+      "Effect" : "Allow",
+      "Principal" : "*",
+      "Action" : "execute-api:Invoke",
+      "Resource" : "arn:aws:execute-api:ap-southeast-1:058264269465:bk5wiynzsi/*/*/*"
+    } ]
+  }
+}
