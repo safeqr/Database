@@ -32,6 +32,43 @@
             }
           },
           "requestParameters" : {
+            "integration.request.header.accessToken" : "context.authorizer.claims.custom:access_token",
+            "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub",
+            "integration.request.header.refreshToken" : "context.authorizer.claims.custom:refresh_token"
+          },
+          "passthroughBehavior" : "when_no_match",
+          "connectionType" : "VPC_LINK",
+          "tlsConfig" : {
+            "insecureSkipVerification" : true
+          },
+          "type" : "http_proxy"
+        }
+      }
+    },
+    "/v1/gmail/getScannedEmails" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "Cognito" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "connectionId" : "h1icfc",
+          "httpMethod" : "GET",
+          "uri" : "https://safeqr-nlb-6bd79c7ba50f3cb5.elb.ap-southeast-1.amazonaws.com:8443/v1/gmail/getScannedEmails",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "requestParameters" : {
             "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
           },
           "passthroughBehavior" : "when_no_match",
@@ -345,7 +382,6 @@
             "default" : {
               "statusCode" : "200"
             }
-            
           },
           "requestParameters" : {
             "integration.request.header.X-USER-ID" : "context.authorizer.claims.sub"
@@ -586,15 +622,15 @@
     "DEFAULT_4XX" : {
       "responseParameters" : {
         "gatewayresponse.header.Access-Control-Allow-Methods" : "'OPTIONS'",
-        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'",
-        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'"
       }
     },
     "DEFAULT_5XX" : {
       "responseParameters" : {
         "gatewayresponse.header.Access-Control-Allow-Methods" : "'OPTIONS'",
-        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'",
-        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+        "gatewayresponse.header.Access-Control-Allow-Headers" : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+        "gatewayresponse.header.Access-Control-Allow-Origin" : "'*'"
       }
     }
   },
