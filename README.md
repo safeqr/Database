@@ -68,8 +68,8 @@ CREATE DATABASE safeqr;
 Navigate to the `/sql/` directory and run the provided scripts to set up your database schema and populate it with dummy data:
 
 ```bash
-psql -d your_database_name -f Create_all_tables.sql
-psql -d your_database_name -f Dummy_data.sql
+psql -d safeqr -f Create_all_tables.sql
+psql -d safeqr -f Dummy_data.sql
 ```
 
 ### 4. Verifying the Database Setup
